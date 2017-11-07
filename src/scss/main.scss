@@ -1,0 +1,36 @@
+/*
+
+Float-Grid
+Author: Charles Ojukwu
+
+Classes stored here
+
+*/
+
+//Variables
+$columns: 12;
+$gutter: 2em;
+
+@import "grid";
+
+.row {
+    @include row;
+}
+
+.col {
+    @include column;
+}
+
+@for $i from 1 through $columns {
+    .col-#{$i} {
+        @include column($i);
+    }
+}
+
+.sidebar {
+    @include column(1);
+}
+
+.content {
+    @include column(3);
+}

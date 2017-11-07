@@ -1,0 +1,37 @@
+{
+  "name": "flex-grid",
+  "description": "A Flexbox based CSS Grid Framework",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cojdev/flex-grid.git"
+  },
+  "keywords": [
+    "flexbox",
+    "flex",
+    "grid",
+    "css",
+    "framework"
+  ],
+  "author": "Charles Ojukwu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cojdev/flex-grid/issues"
+  },
+  "homepage": "https://github.com/cojdev/flex-grid#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-filter": "^5.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1"
+  }
+}

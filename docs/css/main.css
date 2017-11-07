@@ -1,0 +1,84 @@
+/*
+
+Float-Grid
+Author: Charles Ojukwu
+
+Classes stored here
+
+*/
+/*
+
+Float-Grid
+Author: Charles Ojukwu
+
+Mixins stored here
+
+*/
+*, *::before, *::after {
+  box-sizing: border-box; }
+
+.row {
+  display: flex;
+  margin: 0 -1em; }
+
+.col {
+  flex-grow: 2;
+  margin: 0 1em; }
+
+.col-1 {
+  flex-grow: 1;
+  margin: 0 1em; }
+
+.col-2 {
+  flex-grow: 2;
+  margin: 0 1em; }
+
+.col-3 {
+  flex-grow: 3;
+  margin: 0 1em; }
+
+.col-4 {
+  flex-grow: 4;
+  margin: 0 1em; }
+
+.col-5 {
+  flex-grow: 5;
+  margin: 0 1em; }
+
+.col-6 {
+  flex-grow: 6;
+  margin: 0 1em; }
+
+.col-7 {
+  flex-grow: 7;
+  margin: 0 1em; }
+
+.col-8 {
+  flex-grow: 8;
+  margin: 0 1em; }
+
+.col-9 {
+  flex-grow: 9;
+  margin: 0 1em; }
+
+.col-10 {
+  flex-grow: 10;
+  margin: 0 1em; }
+
+.col-11 {
+  flex-grow: 11;
+  margin: 0 1em; }
+
+.col-12 {
+  flex-grow: 12;
+  margin: 0 1em; }
+
+.sidebar {
+  flex-grow: 1;
+  margin: 0 1em; }
+
+.content {
+  flex-grow: 3;
+  margin: 0 1em; }
+
+/*# sourceMappingURL=main.css.map */
