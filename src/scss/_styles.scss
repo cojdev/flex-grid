@@ -1,0 +1,8 @@
+@mixin box-stripes ($a: $primary) {
+    border-radius: 4px;
+    border: $a solid 1px;
+    color: $a;
+    background-image: url("../img/column-stripe-2x.png");
+    background-color: $background;
+    background-size: 20px 20px;
+}

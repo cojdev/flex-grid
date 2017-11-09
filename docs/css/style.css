@@ -1,6 +1,8 @@
 html {
     font-family: "Work Sans", sans-serif;
     font-size: 16px;
+    line-height: 1.5;
+    color: #444;
 }
 
 body {
@@ -11,13 +13,13 @@ body {
 }
 
 h1 {
-    font-weight: 200;
+    font-weight: 300;
     font-size: 3rem;
     margin: 2em 0;
 }
 
 h2 {
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .heading {
@@ -28,31 +30,35 @@ h2 {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
+    padding: 0 1rem;
+    display: block;
 }
 
-[class*="col"], .content, .sidebar {
-    border-radius: 4px;
-    border: #e34 solid 1px;
-    color: #e34;
-    background: url("../img/column-stripe.png");
-}
-
-p {
+.stripes p {
     background: #f8f8f8;
     display: inline-block;
     padding: 4px;
     border-radius: 4px;
 }
 
-code {
-    background: #333;
+pre code {
+    background: #23241f;
     color: #ddd;
     font-family: "Inconsolata", monospace;
     border-radius: 4px;
 }
 
+.content, .sidebar {
+    height: 200px;
+}
+
+code {
+    color: #e34;
+    background: #ddd;
+}
+
 pre {
-    background: #333;
+    background: #23241f;
     text-align: left;
     border-radius: 4px;
 }
@@ -60,6 +66,7 @@ pre {
 .source {
     display: flex;
     align-items: stretch;
+    margin-bottom: 2rem;
 }
 
 .source > * {

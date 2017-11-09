@@ -7,30 +7,75 @@ Classes stored here
 
 */
 
-//Variables
+//Grid
 $columns: 12;
 $gutter: 2em;
 
+//Styling
+$primary: #e34;
+$background: #f8f8f8;
+
+@import "styles";
 @import "grid";
 
 .row {
     @include row;
 }
 
+.g0 {
+    margin: 0;
+}
+
+.gs {
+    margin: -$gutter/4;
+}
+
+.gl {
+    margin: -$gutter*0.75;
+}
+
+.container {
+    @include container;
+}
+
 .col {
     @include column;
+    flex-grow: 1;
 }
 
 @for $i from 1 through $columns {
     .col-#{$i} {
         @include column($i);
+        .g0 & {
+            @include column($i, 0);
+        }
+        .gs & {
+            @include column($i, $gutter/2)
+        }
+        .gl & {
+            @include column($i, $gutter*1.5)
+        }
     }
 }
 
+@for $i from 1 through $columns {
+    .push-#{$i} {
+        @include push($i);
+    }
+}
+
+.nested {
+    padding: 1rem;
+}
+
+.header,.footer {
+    @include column(12);
+}
+
 .sidebar {
-    @include column(1);
+    @include column(3);
 }
 
 .content {
-    @include column(3);
+    @include column(9);
 }
