@@ -1,10 +1,5 @@
 /*
-
-Flex-Grid
-Author: Charles Ojukwu
-
-Mixins stored here
-
+	Grid
 */
 
 *,*:before,*:after {
@@ -56,14 +51,16 @@ Mixins stored here
 }
 
 //Push
-@mixin push($a) {
-	position: relative;
-	flex-grow: initial;
-	left: calc(#{$a} * 100% / #{$columns});
+@mixin push($a, $min: 640px) {
+	@media screen and (min-width: $min) {
+		position: relative;
+		flex-grow: initial;
+		left: ($a / $columns) * 100%;
+	}
 }
 
 //Pull
-@mixin pull($a) {
+@mixin pull($a, $min: 640px) {
 	position: relative;
 	flex-grow: initial;
 	right: calc(#{$a} * 100% / #{$columns});

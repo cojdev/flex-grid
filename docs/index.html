@@ -9,39 +9,63 @@
     <link rel="stylesheet" href="css/main.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/manifest.json">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="theme-color" content="#ffffff">
     <title>Flex Grid</title>
 </head>
 <body>
-    <main class="main" role="main">
+    <div class="topbar">
+        <div class="logo"><a href="https://cojdev.github.io"><img src="img/co.png" alt="Charles Ojukwu"></a></div>
+        <ul class="inline-list">
+            <li><a href="https://cojdev.github.io/float-grid"><span class="float">Float</span> Grid</a></li>
+            <li><a href="https://cojdev.github.io/flex-grid"><span class="flex">Flex</span> Grid</a></li>
+        </ul>
+    </div>
+        <hr>
+    <header class="header">
+        <div>
+            <h1><span class="flex">Flex</span> Grid</h1>
+            <p>A simple Flexbox-based CSS Grid System built with <a href="http://sass-lang.com">Sass</a>.</p>
+            <p><a href="https://github.com/cojdev/flex-grid"><i class="fa fa-github" aria-hidden="true"></i> View on Github</a></p>
+        </div>
+    </header>
 
-        <h1><span class="heading">Flex</span> Grid</h1>
-        <p>A simple Flexbox Grid System built with <a href="http://sass-lang.com">Sass</a>.</p>
+    <div class="canvas-wrap">
+        <canvas id="canvas" class="canvas"></canvas>
+    </div>
+
+    <main class="main" role="main">
         
         <!-- Variables -->
         <h2>Global Variables</h2>
-        <ul>
-            <dt><code>$columns</code></dt>
-            <dd>Total number of columns.</dd>
-            
-            <dt><code>$gutter</code></dt>
-            <dd>Space between columns.</dd>
-        </ul>
+        <table>
+            <tr>
+                <td><code>$columns</code></td>
+                <td>Total number of columns.</td>
+            </tr>
+            <tr>
+                <td><code>$gutter</code></td>
+                <td>Space between columns.</td>
+            </tr>
+        </table>
 
         <!-- Mixins -->
         <h2>Mixins</h2>
-        <dl>
-            <dt>Row</dt>
-            <dd><code>row(size, gutter)</code></dd>
-
-            <dt>Column</dt>
-            <dd>
-
-                <code>column(size, gutter, min-break, max-break)</code>
-            </dd>
-
-            <dt></dt>
-            <dd></dd>
-        </dl>
+        <table>
+            <tr>
+                <td>Row</td>
+                <td><code>row(size, gutter)</code></td>
+            </tr>
+            <tr>
+                <td>Column</td>
+                <td><code>column(size, gutter, min-break, max-break)</code></td>
+            </tr>
+        </table>
                
 
         <!-- Standard Columns -->
@@ -59,8 +83,7 @@
             </div>
         </div>
         <div class="source">
-            <pre class="html"><code>
-&lt;div class=&quot;row&quot;&gt;
+<pre class="html"><code>&lt;div class=&quot;row&quot;&gt;
     &lt;div class=&quot;col&quot;&gt;
         &lt;p&gt;col&lt;/p&gt; 
     &lt;/div&gt;
@@ -70,17 +93,14 @@
     &lt;div class=&quot;col&quot;&gt;
         &lt;p&gt;col&lt;/p&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-        </code></pre>
-        <pre class="css"><code>
-.row {
+&lt;/div&gt;</code></pre>
+<pre class="css"><code>.row {
     @include row;
 }
 
 .col {
     @include column;
-}
-            </code></pre>
+}</code></pre>
         </div>
 
 
@@ -97,25 +117,21 @@
         </div>
 
         <div class="source">
-            <pre class="html"><code>
-&lt;div class=&quot;row&quot;&gt;
+<pre class="html"><code>&lt;div class=&quot;row&quot;&gt;
     &lt;div class=&quot;col-4&quot;&gt;
         &lt;p&gt;col-4&lt;/p&gt; 
     &lt;/div&gt;
     &lt;div class=&quot;col-8&quot;&gt;
         &lt;p&gt;col-8&lt;/p&gt; 
     &lt;/div&gt;
-&lt;/div&gt;
-        </code></pre>
-        <pre class="css"><code>
-.col-4 {
+&lt;/div&gt;</code></pre>
+<pre class="css"><code>.col-4 {
     @include column(4);
 }
 
 .col-8 {
     @include column(8);
-}
-            </code></pre>
+}</code></pre>
         </div>
         
 
@@ -123,7 +139,7 @@
         <h2>Semantic Classes</h2>
         <p>Use SCSS mixins to keep markup semantic.</p>
         <div class="container stripes">
-            <div class="header">
+            <div class="header2">
                 <p>Header</p> 
             </div>
             <div class="content">
@@ -132,13 +148,12 @@
             <div class="sidebar">
                 <p>Sidebar</p>
             </div>
-            <div class="footer">
+            <div class="footer2">
                 <p>Footer</p> 
             </div>
         </div>
         <div class="source">
-            <pre class="html"><code>
-&lt;div class=&quot;container&quot;&gt;
+<pre class="html"><code>&lt;div class=&quot;container&quot;&gt;
     &lt;div class=&quot;header&quot;&gt;
         &lt;!-- Header --&gt; 
     &lt;/div&gt;
@@ -151,10 +166,8 @@
     &lt;div class=&quot;footer&quot;&gt;
         &lt;!-- Footer --&gt; 
     &lt;/div&gt;
-&lt;/div&gt;
-        </code></pre>
-        <pre class="css"><code>
-.header {
+&lt;/div&gt;</code></pre>
+<pre class="css"><code>.header {
     @include column(12);
 }
 .sidebar {
@@ -165,8 +178,7 @@
 }
 .footer {
     @include column(12);
-}
-            </code></pre>
+}</code></pre>
         </div>
         <!-- Offset -->
         <h2>Push</h2>
@@ -207,8 +219,7 @@
             </div>
         </div>
 
-        <pre class="html"><code>
-&lt;div class=&quot;row&quot;&gt;
+<pre class="html"><code>&lt;div class=&quot;row&quot;&gt;
     &lt;div class=&quot;col&quot;&gt;
         &lt;!-- Content --&gt;
         &lt;div class=&quot;row&quot;&gt;
@@ -217,70 +228,115 @@
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-        </code></pre>
+&lt;/div&gt;</code></pre>
 
         <!-- Gutters -->
         <h2>Gutters</h2>
         <p>Gutter sizes are based on the <code>$gutter</code> value (default 2rem).</p>
         <div class="row">
-            <!-- No Gutter -->
-            <div class="col">
-                <div class="row g0 stripes">
-                    <div class="col-6">
-                        <p>no gutter</p>
+            <div class="col-8">
+                <div class="row">
+                    <!-- No Gutter -->
+                    <div class="col-12">
+                        <div class="row g0 stripes">
+                            <div class="col-6">
+                                <p>no gutter</p>
+                            </div>
+                            <div class="col-6">
+                                <p>no gutter</p>
+                            </div>
+                            <div class="col-6">
+                                <p>no gutter</p>
+                            </div>
+                            <div class="col-6">
+                                <p>no gutter</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-6">
-                        <p>no gutter</p>
+                    <!-- Small Gutter -->
+                    <div class="col-12">
+                        <div class="row gs stripes">
+                            <div class="col-6">
+                                <p>small gutter</p>
+                            </div>
+                            <div class="col-6">
+                                <p>small gutter</p>
+                            </div>
+                            <div class="col-6">
+                                <p>small gutter</p>
+                            </div>
+                            <div class="col-6">
+                                <p>small gutter</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-6">
-                        <p>no gutter</p>
-                    </div>
-                    <div class="col-6">
-                        <p>no gutter</p>
+                    <!-- Large Gutter -->
+                    <div class="col-12">
+                        <div class="row gl stripes">
+                            <div class="col-6">
+                                <p>large gutter</p>
+                            </div>
+                            <div class="col-6">
+                                <p>large gutter</p>
+                            </div>
+                            <div class="col-6">
+                                <p>large gutter</p>
+                            </div>
+                            <div class="col-6">
+                                <p>large gutter</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Small Gutter -->
-            <div class="col">
-                <div class="row gs stripes">
-                    <div class="col-6">
-                        <p>small gutter</p>
-                    </div>
-                    <div class="col-6">
-                        <p>small gutter</p>
-                    </div>
-                    <div class="col-6">
-                        <p>small gutter</p>
-                    </div>
-                    <div class="col-6">
-                        <p>small gutter</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Large Gutter -->
-            <div class="col">
-                <div class="row gl stripes">
-                    <div class="col-6">
-                        <p>large gutter</p>
-                    </div>
-                    <div class="col-6">
-                        <p>large gutter</p>
-                    </div>
-                    <div class="col-6">
-                        <p>large gutter</p>
-                    </div>
-                    <div class="col-6">
-                        <p>large gutter</p>
-                    </div>
-                </div>
-            </div>
-        </div> 
+            <div class="col-4">
+                <!-- Markup -->
+<pre class="html m0"><code>&lt;!-- no gutter --&gt;
+&lt;div class=&quot;row g0&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;
+        &lt;!-- Content --&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;
+        &lt;!-- Content --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 
+&lt;!-- small gutter --&gt;
+&lt;div class=&quot;row gs&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;
+        &lt;!-- Content --&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;
+        &lt;!-- Content --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- large gutter --&gt;
+&lt;div class=&quot;row gl&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;
+        &lt;!-- Content --&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;
+        &lt;!-- Content --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
     </main>
+    
+    <hr>
+    
+    <footer class="footer">
+        
+        <ul class="inline-list">
+            <li>Made by <a href="https://cojdev.github.io">Charles Ojukwu</a></li>
+            <li><a href="https://github.com/cojdev">GitHub</a></li>
+        </ul>
+    </footer>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
+    <script src="js/waves.js"></script>
 
 </body>
 </html>

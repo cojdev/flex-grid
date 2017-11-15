@@ -1,9 +1,7 @@
 /*
 
-Float-Grid
+Flex-Grid
 Author: Charles Ojukwu
-
-Classes stored here
 
 */
 
@@ -65,10 +63,10 @@ $background: #f8f8f8;
 }
 
 .nested {
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
-.header,.footer {
+.header2,.footer2 {
     @include column(12);
 }
 
@@ -78,4 +76,15 @@ $background: #f8f8f8;
 
 .content {
     @include column(9);
+}
+
+.sidebar, .content {
+    &::before {
+        content: '';
+    
+        display: inline-block;
+        vertical-align: middle;
+        width: 0px;
+        height: 100%;
+    }
 }

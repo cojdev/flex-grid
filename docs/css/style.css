@@ -1,6 +1,6 @@
 html {
     font-family: "Work Sans", sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
     color: #444;
 }
@@ -9,34 +9,72 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background: #f8f8f8;
+    background-color: #f2f2f2;
+    
+    /* Large gutters cause horizontal scrollbars on mobile devices */
+    overflow-x: hidden;
 }
 
+/* Typography */
 h1 {
     font-weight: 300;
-    font-size: 3rem;
-    margin: 2em 0;
+    font-size: 4rem;
 }
 
 h2 {
     font-weight: 400;
 }
 
-.heading {
+a {
     color: #e34;
+    text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+.header {
+    height: 400px;
+    background-color: #fff;
+    background-image: linear-gradient(to bottom, #f8f8f8, #fff); 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header p {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/* Canvas */
+.canvas-wrap {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.canvas {
+    display: block;
+    transform: scale(1,-1);
+}
+
+/* Main */
 .main {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 2rem 1rem;
     display: block;
 }
 
 .stripes p {
     background: #f8f8f8;
     display: inline-block;
+    vertical-align: middle;
     padding: 4px;
     border-radius: 4px;
 }
@@ -44,7 +82,7 @@ h2 {
 pre code {
     background: #23241f;
     color: #ddd;
-    font-family: "Inconsolata", monospace;
+    font-size: 0.9em;
     border-radius: 4px;
 }
 
@@ -55,24 +93,96 @@ pre code {
 code {
     color: #e34;
     background: #ddd;
+    font-family: "Inconsolata", monospace;
 }
 
 pre {
     background: #23241f;
     text-align: left;
     border-radius: 4px;
+    padding-left: 0.5em;
+}
+
+.m0 {
+    margin: 0;
 }
 
 .source {
     display: flex;
     align-items: stretch;
+}
+
+.topbar {
+    background: #f8f8f8;
+    height: 50px;
+    font-weight: 400;
+}
+
+.topbar a {
+    color: #555;
+}
+
+.topbar > ul {
+    line-height: 50px;
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+}
+.logo a {
+    display: block;
+    height: 50px;
+    padding: .5rem;
+}
+.logo img {
+    height: 100%;
+    width: auto;
+}
+
+.flex {
+    color: #e34;
+}
+
+.float {
+    color: #28d;
+}
+
+hr {
+    height: 1px;
+    border: none;
+    background: #ddd;
+    margin: 0;
+}
+
+section {
     margin-bottom: 2rem;
 }
 
 .source > * {
-    width: 50%;
+    width: calc(50% - 0.5rem);
 }
 
 .source > *:first-child {
     margin-right: 1rem;
+}
+
+.footer {
+    padding: 2rem 0;
+}
+
+.inline-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.inline-list li {
+    display: inline;
+}
+
+.inline-list li + li::before {
+    content: " • ";
+    color: #ddd;
+
 }
